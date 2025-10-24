@@ -14,4 +14,8 @@ public class InputParse {
         List<String> splitInput = Arrays.asList(input.split(","));
         return splitInput;
     }
+
+    public List<String> getCarNames() {
+        return carNames;
+    }
 }
