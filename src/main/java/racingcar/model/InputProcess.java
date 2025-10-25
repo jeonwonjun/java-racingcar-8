@@ -3,10 +3,10 @@ package racingcar.model;
 import java.util.Arrays;
 import java.util.List;
 
-public class InputParse {
+public class InputProcess {
     private final List<String> carNames;
 
-    public InputParse(String input) {
+    public InputProcess(String input) {
         this.carNames = parse(input);
     }
 

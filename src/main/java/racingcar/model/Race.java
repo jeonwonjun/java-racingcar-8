@@ -13,4 +13,12 @@ public class Race {
                 .collect(Collectors.toList());
         this.tryCount = tryCount;
     }
+
+    public void racing() {
+
+    }
+
+    public int getTryCount() {
+        return tryCount;
+    }
 }
