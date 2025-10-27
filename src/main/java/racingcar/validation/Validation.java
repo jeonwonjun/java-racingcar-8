@@ -14,7 +14,7 @@ public class Validation {
     }
 
     public static void validateBlank(String input) {
-        if (input.isBlank()) {
+        if (input.contains(" ")) {
             throw new IllegalArgumentException("자동차 이름에는 공백이 들어오면 안됩니다.");
         }
     }
