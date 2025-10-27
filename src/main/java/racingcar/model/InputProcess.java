@@ -9,18 +9,22 @@ public class InputProcess {
     private final int tryCount;
 
     public InputProcess(String input, String tryCount) {
-        this.carNames = parse(input);
-        this.tryCount = Integer.parseInt(tryCount);
-
-        for (String carName : carNames) {
-            Validation.validateCarName(carName);
-        }
-        Validation.validateCarNameDuplication(carNames);
-        Validation.validateTryCount(this.tryCount);
+        this.carNames = parseInput(input);
+        this.tryCount = parseTryCount(tryCount);
     }
 
-    private List<String> parse(String input) {
-        return Arrays.asList(input.split(","));
+    private static List<String> parseInput(String input) {
+        Validation.validateBlank(input);
+        List<String> parseInput = Arrays.asList(input.split(","));
+        Validation.validateCarNameDuplication(parseInput);
+        Validation.validateLength(parseInput);
+        return parseInput;
+    }
+
+    private static int parseTryCount(String tryCount) {
+        int count = Validation.validateToInt(tryCount);
+        Validation.validateCount(count);
+        return count;
     }
 
     public List<String> getCarNames() {
