@@ -12,7 +12,7 @@ public class RaceTest {
     @Test
     void 우승자_구하기() {
         // given
-        Race race = new Race(List.of("pobi", "won", "jun"));
+        Race race = new Race(List.of("pobi", "won", "jun"), 5);
         List<Car> cars = race.getCars();
         // when
         cars.get(0).go();

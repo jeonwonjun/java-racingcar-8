@@ -8,16 +8,19 @@ import racingcar.model.RaceProcess;
 import racingcar.view.OutputView;
 
 public class RaceController {
-    String input = ViewController.readCarNames();
-    String tryCount = ViewController.readTryCount();
-    InputProcess inputProcess = new InputProcess(input, tryCount);
 
-    Race race = new Race(inputProcess.getCarNames());
+    private final Race race;
+    private final RaceProcess raceProcess;
 
-    RaceProcess raceProcess = new RaceProcess(race);
+    public RaceController() {
+        RaceInit raceInit = new RaceInit();
+        this.race = raceInit.init();
+        this.raceProcess = new RaceProcess(race);
+    }
+
 
     public void start() {
-        raceProcess.startRace(inputProcess.getTryCount());
+        raceProcess.startRace(race.getTryCount());
         ViewController.printWinner(race.getWinner());
     }
 }

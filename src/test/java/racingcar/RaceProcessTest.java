@@ -17,10 +17,10 @@ public class RaceProcessTest {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         // given
-        Race race = new Race(List.of("pobi", "won", "jun"));
+        Race race = new Race(List.of("pobi", "won", "jun"), 5);
         RaceProcess raceProcess = new RaceProcess(race);
         // when
-        raceProcess.startRace(5);
+        raceProcess.startRace(race.getTryCount());
         // then
         String result = outputStream.toString();
         assertThat(result).contains("실행 결과");
