@@ -56,6 +56,43 @@
     - [x] 공백 불가능
   - 사용자 이동 횟수 입력
     - [x] 0 이상의 정수인가
+   
+
+## 프로젝트 구조
+```
+├───main
+│   └───java
+│       └───racingcar
+│           │   Application.java
+│           │
+│           ├───controller
+│           │       RaceController.java
+│           │       RaceInit.java
+│           │       ViewController.java
+│           │
+│           ├───model
+│           │       Car.java
+│           │       Information.java
+│           │       InputProcess.java
+│           │       Race.java
+│           │       RaceProcess.java
+│           │
+│           ├───validation
+│           │       Validation.java
+│           │
+│           └───view
+│                   InputView.java
+│                   OutputView.java
+│
+└───test
+    └───java
+        └───racingcar
+                ApplicationTest.java
+                InputProcessTest.java
+                OutputVieTest.java
+                RaceProcessTest.java
+                RaceTest.java
+```
 
 ## Commit Conventions
 
