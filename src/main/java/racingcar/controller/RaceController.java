@@ -12,12 +12,12 @@ public class RaceController {
     String tryCount = ViewController.readTryCount();
     InputProcess inputProcess = new InputProcess(input, tryCount);
 
-    Race race = new Race(inputProcess.getCarNames(), Integer.parseInt(tryCount));
+    Race race = new Race(inputProcess.getCarNames());
 
     RaceProcess raceProcess = new RaceProcess(race);
 
     public void start() {
-        raceProcess.startRace(race.getTryCount());
+        raceProcess.startRace(inputProcess.getTryCount());
         ViewController.printWinner(race.getWinner());
     }
 }

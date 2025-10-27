@@ -30,4 +30,8 @@ public class InputProcess {
     public List<String> getCarNames() {
         return carNames;
     }
+
+    public int getTryCount() {
+        return tryCount;
+    }
 }
