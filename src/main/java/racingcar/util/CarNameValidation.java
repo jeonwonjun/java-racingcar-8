@@ -5,8 +5,6 @@ import java.util.regex.Pattern;
 
 public class CarNameValidation {
     private static final int CAR_LENGTH = 5;
-    private static final int MIN_TRYCOUNT = 1;
-    private static final int CAR_DUPLICATE = 1;
 
     public static void validate(String carName) {
         validateLength(carName);
